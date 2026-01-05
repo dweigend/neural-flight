@@ -22,29 +22,60 @@
 
 ---
 
-## Phase 1: Prototyping (Q1 2026)
+## Phase 0: Recherche (Q4 2025 – Q1 2026)
 
-### M1: Sensor-Prototyp 🔄
-**Zeitraum:** KW 1-2 (Januar 2026)  
-**Status:** In Arbeit
-
-**Ziel:** ESP32 + BNO055 senden stabile Orientierungsdaten per WebSocket
+### R1: Sensor & Hardware-Recherche ✅
+**Zeitraum:** KW 1 (Januar 2026)
+**Status:** Abgeschlossen
 
 | Task | Beschreibung | Status |
 |------|--------------|--------|
-| Hardware beschaffen | ESP32, BNO055, Breadboard, Kabel | ⏳ |
-| I2C-Verbindung testen | Arduino Serial Monitor, Euler-Winkel | ⏳ |
+| Problemstellung definieren | Was messen wir? Welche Anforderungen? | ✅ |
+| Sensortypen vergleichen | IMU vs. optisches Tracking | ✅ |
+| Sensor-Vergleich | BNO055 vs BNO085 vs ICM-20948 vs MPU6050 | ✅ |
+| Protokolle evaluieren | WebSocket vs OSC vs MQTT | ✅ |
+| Datenformate | Quaternionen für Three.js/Godot/Unity | ✅ |
+| DIY-Projekte sammeln | SlimeVR, XSimulator, GitHub-Projekte | ✅ |
+| Bezugsquellen | Deutsche Händler (Berrybase, AZ-Delivery) | ✅ |
+
+**Ergebnis:** [docs/hardware/SENSOR_RESEARCH.md](hardware/SENSOR_RESEARCH.md)
+
+---
+
+### R2: WebXR & Software-Recherche ⏳
+**Zeitraum:** KW 2 (Januar 2026)
+**Status:** Geplant
+
+| Task | Beschreibung | Status |
+|------|--------------|--------|
+| WebXR-Frameworks | Threlte vs. A-Frame vs. native Three.js | ⏳ |
+| Quest 3 Workflow | ADB, HTTPS, Developer Mode | ⏳ |
+| AR/MR Features | Passthrough, RATK | ⏳ |
+
+---
+
+## Phase 1: Prototyping (Q1 2026)
+
+### M1: Sensor-Prototyp 🔄
+**Zeitraum:** KW 2-3 (Januar 2026)
+**Status:** Bereit zum Start
+
+**Ziel:** ESP32 + Sensor senden stabile Orientierungsdaten per WebSocket
+
+| Task | Beschreibung | Status |
+|------|--------------|--------|
+| Hardware bestellen | ESP32 + BNO055 oder ICM-20948 | ⏳ |
+| I2C-Verbindung testen | Arduino Serial Monitor, Quaternion-Output | ⏳ |
 | WiFi-Konfiguration | Verbindung zu dediziertem Router | ⏳ |
 | WebSocket-Server | Node.js Server empfängt Telemetrie | ⏳ |
-| JSON-Protokoll | `{"euler": {"x": 0, "y": 0, "z": 0}}` | ⏳ |
+| JSON-Protokoll | Quaternion + Euler + Calibration | ⏳ |
 
-**Erfolgskriterium:**  
+**Erfolgskriterium:**
 Sensor in Hand bewegen → Werte in Browser-Console sichtbar
 
-**Dokumentation:**  
-- [M1_SENSOR_PROTOTYPE.md](04_milestones/M1_SENSOR_PROTOTYPE.md)
-- [ESP32_SETUP.md](01_hardware/ESP32_SETUP.md)
-- [BNO055_SENSOR.md](01_hardware/BNO055_SENSOR.md)
+**Dokumentation:**
+- [M1_SENSOR_PROTOTYPE.md](milestones/M1_SENSOR_PROTOTYPE.md)
+- [SENSOR_RESEARCH.md](hardware/SENSOR_RESEARCH.md)
 
 ---
 

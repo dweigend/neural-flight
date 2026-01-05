@@ -33,17 +33,27 @@
    - DIY-Projekte und Communities gesammelt
    - Bezugsquellen Deutschland
 
+5. **Roadmap aktualisiert** ✅
+   - Phase 0 (Recherche) hinzugefügt
+   - R1 (Sensor & Hardware) als abgeschlossen markiert
+   - R2 (WebXR & Software) als nächster Schritt definiert
+
 ---
 
 ## Aktueller Stand
 
 ### Projektphase
-**Phase 1: Recherche** 🔄
+**Phase 0: Recherche** 🔄
 
-### Abgeschlossene Recherchen
-- ✅ Sensor-Typen und Vergleich
-- ✅ Protokolle und Datenformate
-- ✅ DIY-Communities und Projekte
+### Abgeschlossene Meilensteine
+| Meilenstein | Status | Ergebnis |
+|-------------|--------|----------|
+| R1: Sensor & Hardware-Recherche | ✅ Abgeschlossen | `docs/hardware/SENSOR_RESEARCH.md` |
+
+### Laufende/Geplante Recherchen
+| Meilenstein | Status | Fokus |
+|-------------|--------|-------|
+| R2: WebXR & Software-Recherche | ⏳ Geplant | Threlte vs A-Frame vs Three.js, Quest 3 Workflow |
 
 ### Nächste Prioritäten
 
@@ -51,7 +61,8 @@
 |-----------|-------|-------|
 | 1 | WebXR-Frameworks vergleichen | `docs/software/SVELTEKIT_WEBXR_GUIDE.md`, `docs/software/THRELTE_SETUP.md` |
 | 2 | Quest 3 Developer Workflow | `docs/integration/META_QUEST_WORKFLOW.md` |
-| 3 | Prototyp-Hardware bestellen | Siehe `docs/hardware/SENSOR_RESEARCH.md` |
+| 3 | AR/MR Features (Passthrough, RATK) | `docs/integration/AR_MR_FEATURES.md` |
+| 4 | Prototyp-Hardware bestellen | Siehe `docs/hardware/SENSOR_RESEARCH.md` |
 
 ### Dateien mit Status 🔴 Draft (noch leer)
 
@@ -94,9 +105,10 @@ docs/collaboration/
 
 ## Offene Fragen
 
-- [ ] Welches Thema soll als erstes recherchiert werden?
-- [ ] Soll Hardware (ESP32, Sensoren) vor Software (WebXR) kommen?
-- [ ] Gibt es bereits Hardware zum Testen?
+- [ ] Hardware bestellen? (Empfehlung: ESP32-S3 + BNO085 oder ICM-20948)
+- [ ] Welches WebXR-Framework bevorzugen? (Threlte empfohlen wegen Svelte-Integration)
+- [ ] Quest 3 zum Testen vorhanden?
+- [ ] Dediziertes WLAN für Low-Latency Setup einplanen?
 
 ---
 
