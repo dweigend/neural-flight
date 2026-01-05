@@ -3,6 +3,7 @@ CLAUDE.md
 .claude/
 .cursorrules
 .cursor/
+dev/
 
 # IDE
 .vscode/
@@ -27,7 +28,7 @@ venv/
 dist/
 build/
 .cache/
-
+ j
 # Environment
 .env
 .env.local
