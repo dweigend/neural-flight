@@ -8,7 +8,7 @@
 
 ## Was wurde gemacht?
 
-### Session: 2026-01-05 (Initialisierung)
+### Session: 2026-01-05 (Initialisierung + Hardware-Recherche)
 
 1. **Repository-Struktur aufgebaut**
    - Ordner: `docs/`, `assets/`, `dev/`
@@ -25,6 +25,14 @@
    - `dev/README-WORKFLOW.md` – Menschenlesbare Erklärung
    - `dev/UEBERGABE.md` – Dieses Dokument
 
+4. **Hardware-Recherche abgeschlossen** ✅
+   - Umfassende Sensor-Recherche: `docs/hardware/SENSOR_RESEARCH.md`
+   - Vergleich: BNO055 vs BNO085 vs ICM-20948 vs MPU6050
+   - Protokolle: WebSocket, OSC, MQTT
+   - Datenformate: Quaternionen für Three.js/Godot/Unity
+   - DIY-Projekte und Communities gesammelt
+   - Bezugsquellen Deutschland
+
 ---
 
 ## Aktueller Stand
@@ -32,13 +40,18 @@
 ### Projektphase
 **Phase 1: Recherche** 🔄
 
+### Abgeschlossene Recherchen
+- ✅ Sensor-Typen und Vergleich
+- ✅ Protokolle und Datenformate
+- ✅ DIY-Communities und Projekte
+
 ### Nächste Prioritäten
 
 | Priorität | Thema | Datei |
 |-----------|-------|-------|
-| 1 | ESP32 + BNO055 Setup recherchieren | `docs/hardware/ESP32_SETUP.md`, `docs/hardware/BNO055_SENSOR.md` |
-| 2 | WebXR-Frameworks vergleichen | `docs/software/SVELTEKIT_WEBXR_GUIDE.md`, `docs/software/THRELTE_SETUP.md` |
-| 3 | Quest 3 Developer Workflow | `docs/integration/META_QUEST_WORKFLOW.md` |
+| 1 | WebXR-Frameworks vergleichen | `docs/software/SVELTEKIT_WEBXR_GUIDE.md`, `docs/software/THRELTE_SETUP.md` |
+| 2 | Quest 3 Developer Workflow | `docs/integration/META_QUEST_WORKFLOW.md` |
+| 3 | Prototyp-Hardware bestellen | Siehe `docs/hardware/SENSOR_RESEARCH.md` |
 
 ### Dateien mit Status 🔴 Draft (noch leer)
 
