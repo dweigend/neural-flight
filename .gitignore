@@ -1,0 +1,48 @@
+# Local development files
+CLAUDE.md
+.claude/
+.cursorrules
+.cursor/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies (when code is added)
+node_modules/
+.pnpm-store/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build output
+dist/
+build/
+.cache/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Certificates (mkcert)
+*.pem
+*.key
+*.crt
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
