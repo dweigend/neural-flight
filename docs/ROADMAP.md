@@ -42,15 +42,23 @@
 
 ---
 
-### R2: WebXR & Software-Recherche ⏳
+### R2: WebXR & Software-Recherche ✅
 **Zeitraum:** KW 2 (Januar 2026)
-**Status:** Geplant
+**Status:** Abgeschlossen
 
 | Task | Beschreibung | Status |
 |------|--------------|--------|
-| WebXR-Frameworks | Threlte vs. A-Frame vs. native Three.js | ⏳ |
-| Quest 3 Workflow | ADB, HTTPS, Developer Mode | ⏳ |
-| AR/MR Features | Passthrough, RATK | ⏳ |
+| WebXR-Frameworks | Vanilla Three.js als Basis, Framework-Optionen dokumentiert | ✅ |
+| Quest 3 Workflow | ADB, HTTPS (mkcert), Developer Mode, Remote Debugging | ✅ |
+| AR/MR Features | Passthrough, Spatial Anchors, Hit-Testing, RATK | ✅ |
+
+**Ergebnisse:**
+- [THREEJS_WEBXR_GUIDE.md](software/THREEJS_WEBXR_GUIDE.md) – Native Three.js + WebXR
+- [FRAMEWORK_OPTIONS.md](software/FRAMEWORK_OPTIONS.md) – Optionen für Teams
+- [META_QUEST_WORKFLOW.md](integration/META_QUEST_WORKFLOW.md) – Quest 3 Dev Workflow
+- [AR_MR_FEATURES.md](integration/AR_MR_FEATURES.md) – Passthrough & MR
+
+**Wichtige Entscheidung:** Vanilla Three.js als Plattform-Basis (framework-agnostisch für Teams)
 
 ---
 
@@ -80,27 +88,26 @@ Sensor in Hand bewegen → Werte in Browser-Console sichtbar
 ---
 
 ### M2: WebXR Hello World ⏳
-**Zeitraum:** KW 2-3 (Januar 2026)  
+**Zeitraum:** KW 2-3 (Januar 2026)
 **Status:** Geplant
 
 **Ziel:** 3D-Würfel in VR auf Meta Quest 3 anzeigen
 
 | Task | Beschreibung | Status |
 |------|--------------|--------|
-| SvelteKit Projekt | `pnpm create svelte@latest` | ⏳ |
-| Threlte Integration | Three.js + Svelte Setup | ⏳ |
-| HTTPS Zertifikate | `vite-plugin-mkcert` | ⏳ |
+| Vanilla Three.js | Minimal HTML + Three.js Setup | ⏳ |
+| HTTPS Zertifikate | mkcert für lokale Entwicklung | ⏳ |
 | ADB Reverse Tunnel | `adb reverse tcp:5173 tcp:5173` | ⏳ |
-| WebXR Session | VR Button, Immersive Session | ⏳ |
+| WebXR Session | VRButton, `renderer.xr.enabled = true` | ⏳ |
 | Quest Browser Test | `https://localhost:5173` | ⏳ |
 
-**Erfolgskriterium:**  
+**Erfolgskriterium:**
 Cube in VR sichtbar, Head-Tracking funktioniert
 
-**Dokumentation:**  
-- [M2_WEBXR_HELLO_WORLD.md](04_milestones/M2_WEBXR_HELLO_WORLD.md)
-- [SVELTEKIT_WEBXR_GUIDE.md](02_software/SVELTEKIT_WEBXR_GUIDE.md)
-- [META_QUEST_WORKFLOW.md](03_integration/META_QUEST_WORKFLOW.md)
+**Dokumentation:**
+- [M2_WEBXR_HELLO_WORLD.md](milestones/M2_WEBXR_HELLO_WORLD.md)
+- [THREEJS_WEBXR_GUIDE.md](software/THREEJS_WEBXR_GUIDE.md)
+- [META_QUEST_WORKFLOW.md](integration/META_QUEST_WORKFLOW.md)
 
 ---
 
@@ -287,6 +294,7 @@ graph LR
 
 | Datum | Version | Änderung |
 |-------|---------|----------|
+| 2026-01-05 | 0.2 | R2 abgeschlossen, Vanilla Three.js als Basis |
 | 2026-01-05 | 0.1 | Initial Roadmap |
 
 ---
