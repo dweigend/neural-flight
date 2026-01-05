@@ -1,0 +1,30 @@
+graph TB
+    subgraph Physical["🔧 Physical Layer"]
+        ICAROS[ICAROS Health<br/>Mechanische Plattform]
+        ESP[ESP32 + BNO055<br/>Telemetrie-Unit]
+        QUEST[Meta Quest 3<br/>VR Headset]
+    end
+
+    subgraph Network["🌐 Network Layer"]
+        ROUTER[WiFi 6 Router<br/>5GHz Dediziert]
+        SERVER[Node.js Server<br/>Socket.io Hub]
+    end
+
+    subgraph Software["💻 Software Layer"]
+        WEBXR[WebXR App<br/>SvelteKit + Threlte]
+        SCENES[VR Scenes<br/>Three.js]
+    end
+
+    ICAROS -->|"Nutzer bewegt"| ESP
+    ESP -->|"WiFi 5GHz"| ROUTER
+    ROUTER --> SERVER
+    SERVER -->|"WebSocket"| WEBXR
+    WEBXR --> SCENES
+    SCENES -->|"Rendered in"| QUEST
+    QUEST -.->|"Nutzer trägt"| ICAROS
+
+    style ICAROS fill:#e3f2fd,stroke:#1976d2
+    style ESP fill:#fff3e0,stroke:#f57c00
+    style QUEST fill:#f3e5f5,stroke:#7b1fa2
+    style SERVER fill:#e8f5e9,stroke:#388e3c
+    style WEBXR fill:#fce4ec,stroke:#c2185b

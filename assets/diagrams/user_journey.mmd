@@ -1,0 +1,36 @@
+stateDiagram-v2
+    [*] --> Idle: System startet
+
+    Idle --> AR_Onboarding: Brille aufgesetzt
+    AR_Onboarding --> Calibration: Auf ICAROS positioniert
+
+    Calibration --> Calibration: Balance nicht OK
+    Calibration --> Ready: Balance OK (3s stabil)
+
+    Ready --> VR_Flight: Countdown abgelaufen
+
+    VR_Flight --> Landing: Session-Timer endet
+    VR_Flight --> Landing: Nutzer erreicht Ziel
+    VR_Flight --> Emergency: Sensor-Verbindung verloren
+
+    Landing --> AR_Offboarding: Transition komplett
+    AR_Offboarding --> Idle: Brille abgenommen
+
+    Emergency --> AR_Offboarding: Sanfter Abbruch
+
+    state Idle {
+        [*] --> WaitingForUser
+        WaitingForUser --> AttractMode: 30s Inaktivität
+        AttractMode --> WaitingForUser: Bewegung erkannt
+    }
+
+    state AR_Onboarding {
+        [*] --> ShowGhostModel
+        ShowGhostModel --> ShowInstructions
+        ShowInstructions --> WaitForPosition
+    }
+
+    state VR_Flight {
+        [*] --> Flying
+        Flying --> Flying: Pitch/Roll Input
+    }
