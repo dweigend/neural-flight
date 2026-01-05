@@ -1,108 +1,91 @@
-# Neural Flight
+# Neural Flight 🪽
 
-> Open-Source-Plattform für immersive VR-Erfahrungen an der Schnittstelle von Mensch und Technik
-
----
-
-## Was ist das hier?
-
-Dieses Repository ist die **Wissensbasis und Experimentierwerkstatt** für das Neural Flight Projekt. Hier sammeln wir Ideen, recherchieren Technologien und dokumentieren unsere Erkenntnisse – bevor wir in die eigentliche Entwicklung gehen.
-
-**Der Fokus liegt auf:**
-- Experimentieren und Ausprobieren
-- Verstehen, welcher Software-Stack funktioniert
-- Herausfinden, wie die Hardware-Integration gelingen kann
-- Schrittweises Aufbauen einer soliden Infrastruktur
-
-Das Projekt wächst organisch. Wir starten mit Recherche und Prototypen, bevor wir uns auf einen finalen Tech-Stack festlegen.
+> VR flight experience on ICAROS — an open-source project by [Futurium Lab](https://futurium.de)
 
 ---
 
-## Die Vision
+## 🎯 What is this?
 
-Wir bauen eine offene Plattform für immersive VR-Erfahrungen, die den menschlichen Körper ins Zentrum stellen. Konkret: VR-Flugerlebnisse auf ICAROS-Simulatoren, bei denen physische Bewegung und virtuelle Wahrnehmung verschmelzen.
+We're building an **immersive VR flight installation** for the Futurium exhibition opening **September 2026**. Visitors will fly through virtual worlds using the [ICAROS](https://www.icaros.com) fitness simulator.
 
-**Kernfragen, die uns antreiben:**
-- Wie akzeptiert das Gehirn virtuelle Körper als eigene?
-- Wie können wir Motion Sickness vermeiden, indem wir echte Bewegung einbeziehen?
-- Wie bauen wir eine Infrastruktur, die modular und erweiterbar ist?
+This repo collects our **early ideas, research, and prototypes**. It's fresh — we just started. 🌱
 
 ---
 
-## Projektphasen
+## ✅ Progress
 
-| Phase | Was passiert | Status |
-|-------|--------------|--------|
-| **1. Recherche** | Wissen sammeln, Technologien evaluieren, Architektur planen | 🔄 Jetzt |
-| **2. Prototypen** | Hardware testen, erste Software-Experimente | ⏳ Bald |
-| **3. Entwicklung** | Kerninfrastruktur aufbauen | ⏳ Geplant |
-| **4. Integration** | Alles zusammenführen, testen, iterieren | ⏳ Geplant |
+### Done
+- [x] Initial project structure
+- [x] Sensor research (IMUs, protocols)
+- [x] WebXR framework evaluation
+- [x] System architecture draft
+
+### In Progress
+- [ ] First hardware prototype (ESP32 + IMU)
+- [ ] WebXR hello world on Quest 3
+
+### Planned
+- [ ] Open pipeline for community apps
+- [ ] Godot integration
+- [ ] Psychology research documentation
+- [ ] Hardware testing & documentation
 
 ---
 
-## Repository-Struktur
+## 🚀 Next Steps
+
+| What | Why |
+|------|-----|
+| 🔌 **Open Pipeline** | Enable students & contributors to build ICAROS apps |
+| 🎮 **Godot Integration** | Connect to the open-source game engine |
+| 🧠 **Psychology Docs** | Expand research on embodiment & vestibular system |
+| 🔧 **Hardware Testing** | Test sensors, document findings |
+
+---
+
+## 📁 Structure
 
 ```
-neuralFlight/
-│
-├── docs/                    # Recherche & Dokumentation
-│   ├── hardware/            # ESP32, Sensoren, Netzwerk
-│   ├── software/            # WebXR, Frameworks, Tools
-│   ├── integration/         # Systemarchitektur, Protokolle
-│   ├── milestones/          # Meilenstein-Definitionen
-│   ├── research/            # Wissenschaftlicher Hintergrund
-│   └── collaboration/       # Kooperationen, Contribution Guide
-│
-├── assets/                  # Medien & Diagramme
-│   ├── diagrams/            # Mermaid-Diagramme (.mmd)
-│   └── images/              # Screenshots, Fotos
-│
-└── README.md                # Du bist hier
+docs/
+├── hardware/      # Sensors, ESP32, network
+├── software/      # WebXR, frameworks
+├── integration/   # Architecture, protocols
+├── research/      # Psychology, embodiment
+└── milestones/    # Project phases
 ```
 
-**Zukünftig kommen hinzu:**
-- `src/` – Code (Frontend, Backend, Firmware)
-- `prototypes/` – Schnelle Experimente
-- `apps/` – Fertige Anwendungen
+---
 
-Die Struktur wächst mit dem Projekt.
+## 🛠 Tech Stack
+
+- **VR:** Meta Quest 3, WebXR
+- **3D:** Three.js, Godot (planned)
+- **Hardware:** ESP32, BNO055 IMU
+- **Backend:** Node.js, WebSocket
 
 ---
 
-## Einstiegspunkte
+## 📖 Background
 
-| Wenn du wissen willst... | Dann lies... |
-|-------------------------|--------------|
-| Wie das System funktionieren soll | [docs/integration/SYSTEM_ARCHITECTURE.md](docs/integration/SYSTEM_ARCHITECTURE.md) |
-| Welche Hardware wir brauchen | [docs/hardware/HARDWARE_LIST.md](docs/hardware/HARDWARE_LIST.md) |
-| Was die Meilensteine sind | [docs/ROADMAP.md](docs/ROADMAP.md) |
-| Wie die Kommunikation läuft | [docs/integration/WEBSOCKET_PROTOCOL.md](docs/integration/WEBSOCKET_PROTOCOL.md) |
-| Was es mit Embodiment auf sich hat | [docs/research/BODY_OWNERSHIP_ILLUSION.md](docs/research/BODY_OWNERSHIP_ILLUSION.md) |
+This builds on our 2019 project ["Being a Drone"](https://www.imd.tu-bs.de/index.php/projects/vr-being-a-drone--flying-architecture/) with TU Braunschweig.
+
+Part of the **"Human + Technology"** theme year 2026.
 
 ---
 
-## Kontext
+## 🤝 Contributing
 
-**Entstehung:** Dieses Projekt entsteht im Rahmen des Themenjahrs "Mensch + Technik" 2026 am [Futurium Berlin](https://futurium.de).
+We're just getting started! Structure may change.
 
-**Referenz:** 2019 haben wir mit der TU Braunschweig das Projekt ["Being a Drone – Flying Architecture"](https://www.imd.tu-bs.de/index.php/projects/vr-being-a-drone--flying-architecture/) realisiert. Neural Flight baut auf diesen Erfahrungen auf.
-
----
-
-## Open Source
-
-Dieses Projekt ist Open Source (MIT License). Wir glauben daran, dass gute Infrastruktur geteilt werden sollte – besonders wenn es um Experimente an der Schnittstelle von Mensch und Technik geht.
-
-Beiträge sind willkommen. Siehe [docs/collaboration/CONTRIBUTION_GUIDE.md](docs/collaboration/CONTRIBUTION_GUIDE.md).
+→ [Contribution Guide](docs/collaboration/CONTRIBUTION_GUIDE.md)
 
 ---
 
-## Kontakt
+## 📬 Contact
 
-**David Weigend**
-Leiter Lab, Futurium Berlin
+**David Weigend** — Lab Lead, Futurium Berlin
 weigend@futurium.de
 
 ---
 
-*Work in Progress. Dieses Repository wächst.*
+**License:** MIT
