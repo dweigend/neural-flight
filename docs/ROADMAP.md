@@ -1,13 +1,13 @@
 # Roadmap
 
-> Meilensteine und Zeitplan für die Icaros WebXR Integration
+> Milestones and timeline for the Icaros WebXR Integration
 
 **Status:** 🟢 Active  
-**Zuletzt aktualisiert:** Januar 2026
+**Last Updated:** January 2026
 
 ---
 
-## Übersicht
+## Overview
 
 ```
 2025 Q4          2026 Q1          2026 Q2          2026 Q3          2026 Q4
@@ -15,96 +15,96 @@
    │                │                │                │                │
    ▼                ▼                ▼                ▼                ▼
 ┌──────┐      ┌──────────┐    ┌────────────┐   ┌──────────┐    ┌─────────┐
-│Konzept│ ──▶ │Prototyping│──▶│ Development │──▶│  Testing  │──▶│ Launch  │
+│Concept│ ──▶ │Prototyping│──▶│ Development │──▶│  Testing  │──▶│ Launch  │
 └──────┘      └──────────┘    └────────────┘   └──────────┘    └─────────┘
    ✅              🔄               ⏳               ⏳              🎯
 ```
 
 ---
 
-## Phase 0: Recherche (Q4 2025 – Q1 2026)
+## Phase 0: Research (Q4 2025 – Q1 2026)
 
-### R1: Sensor & Hardware-Recherche ✅
-**Zeitraum:** KW 1 (Januar 2026)
-**Status:** Abgeschlossen
+### R1: Sensor & Hardware Research ✅
+**Timeframe:** Week 1 (January 2026)
+**Status:** Completed
 
-| Task | Beschreibung | Status |
-|------|--------------|--------|
-| Problemstellung definieren | Was messen wir? Welche Anforderungen? | ✅ |
-| Sensortypen vergleichen | IMU vs. optisches Tracking | ✅ |
-| Sensor-Vergleich | BNO055 vs BNO085 vs ICM-20948 vs MPU6050 | ✅ |
-| Protokolle evaluieren | WebSocket vs OSC vs MQTT | ✅ |
-| Datenformate | Quaternionen für Three.js/Godot/Unity | ✅ |
-| DIY-Projekte sammeln | SlimeVR, XSimulator, GitHub-Projekte | ✅ |
-| Bezugsquellen | Deutsche Händler (Berrybase, AZ-Delivery) | ✅ |
+| Task | Description | Status |
+|------|-------------|--------|
+| Define problem statement | What are we measuring? What are the requirements? | ✅ |
+| Compare sensor types | IMU vs. optical tracking | ✅ |
+| Sensor comparison | BNO055 vs BNO085 vs ICM-20948 vs MPU6050 | ✅ |
+| Evaluate protocols | WebSocket vs OSC vs MQTT | ✅ |
+| Data formats | Quaternions for Three.js/Godot/Unity | ✅ |
+| Collect DIY projects | SlimeVR, XSimulator, GitHub projects | ✅ |
+| Vendors | German retailers (Berrybase, AZ-Delivery) | ✅ |
 
-**Ergebnis:** [docs/hardware/SENSOR_RESEARCH.md](hardware/SENSOR_RESEARCH.md)
+**Result:** [docs/hardware/SENSOR_RESEARCH.md](hardware/SENSOR_RESEARCH.md)
 
 ---
 
-### R2: WebXR & Software-Recherche ✅
-**Zeitraum:** KW 2 (Januar 2026)
-**Status:** Abgeschlossen
+### R2: WebXR & Software Research ✅
+**Timeframe:** Week 2 (January 2026)
+**Status:** Completed
 
-| Task | Beschreibung | Status |
-|------|--------------|--------|
-| WebXR-Frameworks | Vanilla Three.js als Basis, Framework-Optionen dokumentiert | ✅ |
-| Quest 3 Workflow | ADB, HTTPS (mkcert), Developer Mode, Remote Debugging | ✅ |
-| AR/MR Features | Passthrough, Spatial Anchors, Hit-Testing, RATK | ✅ |
+| Task | Description | Status |
+|------|-------------|--------|
+| WebXR frameworks | Vanilla Three.js as base, framework options documented | ✅ |
+| Quest 3 workflow | ADB, HTTPS (mkcert), Developer Mode, Remote Debugging | ✅ |
+| AR/MR features | Passthrough, Spatial Anchors, Hit-Testing, RATK | ✅ |
 
-**Ergebnisse:**
+**Results:**
 - [THREEJS_WEBXR_GUIDE.md](software/THREEJS_WEBXR_GUIDE.md) – Native Three.js + WebXR
-- [FRAMEWORK_OPTIONS.md](software/FRAMEWORK_OPTIONS.md) – Optionen für Teams
+- [FRAMEWORK_OPTIONS.md](software/FRAMEWORK_OPTIONS.md) – Options for teams
 - [META_QUEST_WORKFLOW.md](integration/META_QUEST_WORKFLOW.md) – Quest 3 Dev Workflow
 - [AR_MR_FEATURES.md](integration/AR_MR_FEATURES.md) – Passthrough & MR
 
-**Wichtige Entscheidung:** Vanilla Three.js als Plattform-Basis (framework-agnostisch für Teams)
+**Key Decision:** Vanilla Three.js as platform base (framework-agnostic for teams)
 
 ---
 
 ## Phase 1: Prototyping (Q1 2026)
 
-### M1: Sensor-Prototyp 🔄
-**Zeitraum:** KW 2-3 (Januar 2026)
-**Status:** Bereit zum Start
+### M1: Sensor Prototype 🔄
+**Timeframe:** Weeks 2-3 (January 2026)
+**Status:** Ready to Start
 
-**Ziel:** ESP32 + Sensor senden stabile Orientierungsdaten per WebSocket
+**Goal:** ESP32 + Sensor sends stable orientation data via WebSocket
 
-| Task | Beschreibung | Status |
-|------|--------------|--------|
-| Hardware bestellen | ESP32 + BNO055 oder ICM-20948 | ⏳ |
-| I2C-Verbindung testen | Arduino Serial Monitor, Quaternion-Output | ⏳ |
-| WiFi-Konfiguration | Verbindung zu dediziertem Router | ⏳ |
-| WebSocket-Server | Node.js Server empfängt Telemetrie | ⏳ |
-| JSON-Protokoll | Quaternion + Euler + Calibration | ⏳ |
+| Task | Description | Status |
+|------|-------------|--------|
+| Order hardware | ESP32 + BNO055 or ICM-20948 | ⏳ |
+| Test I2C connection | Arduino Serial Monitor, Quaternion output | ⏳ |
+| WiFi configuration | Connection to dedicated router | ⏳ |
+| WebSocket server | Node.js server receives telemetry | ⏳ |
+| JSON protocol | Quaternion + Euler + Calibration | ⏳ |
 
-**Erfolgskriterium:**
-Sensor in Hand bewegen → Werte in Browser-Console sichtbar
+**Success Criterion:**
+Move sensor in hand → Values visible in browser console
 
-**Dokumentation:**
+**Documentation:**
 - [M1_SENSOR_PROTOTYPE.md](milestones/M1_SENSOR_PROTOTYPE.md)
 - [SENSOR_RESEARCH.md](hardware/SENSOR_RESEARCH.md)
 
 ---
 
 ### M2: WebXR Hello World ⏳
-**Zeitraum:** KW 2-3 (Januar 2026)
-**Status:** Geplant
+**Timeframe:** Weeks 2-3 (January 2026)
+**Status:** Planned
 
-**Ziel:** 3D-Würfel in VR auf Meta Quest 3 anzeigen
+**Goal:** Display 3D cube in VR on Meta Quest 3
 
-| Task | Beschreibung | Status |
-|------|--------------|--------|
-| Vanilla Three.js | Minimal HTML + Three.js Setup | ⏳ |
-| HTTPS Zertifikate | mkcert für lokale Entwicklung | ⏳ |
-| ADB Reverse Tunnel | `adb reverse tcp:5173 tcp:5173` | ⏳ |
-| WebXR Session | VRButton, `renderer.xr.enabled = true` | ⏳ |
-| Quest Browser Test | `https://localhost:5173` | ⏳ |
+| Task | Description | Status |
+|------|-------------|--------|
+| Vanilla Three.js | Minimal HTML + Three.js setup | ⏳ |
+| HTTPS certificates | mkcert for local development | ⏳ |
+| ADB reverse tunnel | `adb reverse tcp:5173 tcp:5173` | ⏳ |
+| WebXR session | VRButton, `renderer.xr.enabled = true` | ⏳ |
+| Quest Browser test | `https://localhost:5173` | ⏳ |
 
-**Erfolgskriterium:**
-Cube in VR sichtbar, Head-Tracking funktioniert
+**Success Criterion:**
+Cube visible in VR, head tracking works
 
-**Dokumentation:**
+**Documentation:**
 - [M2_WEBXR_HELLO_WORLD.md](milestones/M2_WEBXR_HELLO_WORLD.md)
 - [THREEJS_WEBXR_GUIDE.md](software/THREEJS_WEBXR_GUIDE.md)
 - [META_QUEST_WORKFLOW.md](integration/META_QUEST_WORKFLOW.md)
@@ -112,47 +112,47 @@ Cube in VR sichtbar, Head-Tracking funktioniert
 ---
 
 ### M3: Sensor-to-VR Bridge ⏳
-**Zeitraum:** KW 3-4 (Januar/Februar 2026)  
-**Status:** Geplant
+**Timeframe:** Weeks 3-4 (January/February 2026)  
+**Status:** Planned
 
-**Ziel:** VR-Objekt rotiert synchron zur Sensor-Bewegung
+**Goal:** VR object rotates synchronously with sensor movement
 
-| Task | Beschreibung | Status |
-|------|--------------|--------|
-| Socket.io Client | Integration in SvelteKit | ⏳ |
-| Svelte Store | Reaktive Sensor-Daten | ⏳ |
-| Three.js Binding | `object.rotation.set(euler)` | ⏳ |
-| Smoothing | Lerping für flüssige Animation | ⏳ |
-| Latenz-Messung | Ziel: <20ms End-to-End | ⏳ |
+| Task | Description | Status |
+|------|-------------|--------|
+| Socket.io client | Integration in SvelteKit | ⏳ |
+| Svelte store | Reactive sensor data | ⏳ |
+| Three.js binding | `object.rotation.set(euler)` | ⏳ |
+| Smoothing | Lerping for smooth animation | ⏳ |
+| Latency measurement | Target: <20ms end-to-end | ⏳ |
 
-**Erfolgskriterium:**  
-Sensor in Hand = Cube in VR rotiert identisch, flüssig, ohne Lag
+**Success Criterion:**  
+Sensor in hand = Cube in VR rotates identically, smoothly, without lag
 
-**Dokumentation:**  
+**Documentation:**  
 - [M3_SENSOR_TO_VR_BRIDGE.md](04_milestones/M3_SENSOR_TO_VR_BRIDGE.md)
 - [WEBSOCKET_PROTOCOL.md](03_integration/WEBSOCKET_PROTOCOL.md)
 
 ---
 
 ### M4: AR Calibration UI ⏳
-**Zeitraum:** KW 4-6 (Februar 2026)  
-**Status:** Geplant
+**Timeframe:** Weeks 4-6 (February 2026)  
+**Status:** Planned
 
-**Ziel:** Quest 3 Passthrough mit Balance-Check UI
+**Goal:** Quest 3 Passthrough with balance check UI
 
-| Task | Beschreibung | Status |
-|------|--------------|--------|
-| Passthrough aktivieren | RATK oder native WebXR | ⏳ |
-| Ghost Model Overlay | ICAROS 3D-Wireframe | ⏳ |
-| Wasserwaage HUD | Pitch/Roll Visualisierung | ⏳ |
-| Balance Detection | ±3° für 2-3 Sekunden | ⏳ |
-| Audio Feedback | "System kalibriert" | ⏳ |
-| Transition | AR → VR Crossfade | ⏳ |
+| Task | Description | Status |
+|------|-------------|--------|
+| Activate passthrough | RATK or native WebXR | ⏳ |
+| Ghost model overlay | ICAROS 3D wireframe | ⏳ |
+| Level HUD | Pitch/Roll visualization | ⏳ |
+| Balance detection | ±3° for 2-3 seconds | ⏳ |
+| Audio feedback | "System calibrated" | ⏳ |
+| Transition | AR → VR crossfade | ⏳ |
 
-**Erfolgskriterium:**  
-Nutzer sieht realen ICAROS + Overlay, System erkennt stabile Position
+**Success Criterion:**  
+User sees real ICAROS + overlay, system detects stable position
 
-**Dokumentation:**  
+**Documentation:**  
 - [M4_AR_CALIBRATION.md](04_milestones/M4_AR_CALIBRATION.md)
 - [AR_MR_FEATURES.md](03_integration/AR_MR_FEATURES.md)
 
@@ -161,88 +161,88 @@ Nutzer sieht realen ICAROS + Overlay, System erkennt stabile Position
 ## Phase 2: Development (Q2 2026)
 
 ### M5: Flight Physics ⏳
-**Zeitraum:** KW 7-10 (Februar/März 2026)  
-**Status:** Geplant
+**Timeframe:** Weeks 7-10 (February/March 2026)  
+**Status:** Planned
 
-**Ziel:** Implementierung des Flugmodells
+**Goal:** Implement flight model
 
-| Task | Beschreibung | Status |
-|------|--------------|--------|
-| Pitch → Geschwindigkeit | Vorwärts/Rückwärts | ⏳ |
-| Roll → Kurve | Links/Rechts | ⏳ |
-| Decoupled View | Blick ≠ Flugrichtung | ⏳ |
-| Speed Limits | Soft Caps, Comfort | ⏳ |
-| Smoothing | Acceleration Curves | ⏳ |
+| Task | Description | Status |
+|------|-------------|--------|
+| Pitch → Speed | Forward/Backward | ⏳ |
+| Roll → Turn | Left/Right | ⏳ |
+| Decoupled view | Gaze ≠ Flight direction | ⏳ |
+| Speed limits | Soft caps, comfort | ⏳ |
+| Smoothing | Acceleration curves | ⏳ |
 
-**Dokumentation:**  
+**Documentation:**  
 - [M5_FLIGHT_PHYSICS.md](04_milestones/M5_FLIGHT_PHYSICS.md)
 
 ---
 
 ### M6: Environment & Skybox ⏳
-**Zeitraum:** KW 11-14 (März/April 2026)  
-**Status:** Geplant
+**Timeframe:** Weeks 11-14 (March/April 2026)  
+**Status:** Planned
 
-| Task | Beschreibung |
-|------|--------------|
-| Skybox System | HDR, dynamisch |
-| Terrain | Low-poly oder prozedural |
-| Landmarks | Orientierungspunkte |
-| Audio Ambience | Spatial Audio |
+| Task | Description |
+|------|-------------|
+| Skybox system | HDR, dynamic |
+| Terrain | Low-poly or procedural |
+| Landmarks | Orientation points |
+| Audio ambience | Spatial audio |
 
 ---
 
 ### M7: Session Management ⏳
-**Zeitraum:** KW 15-18 (April/Mai 2026)  
-**Status:** Geplant
+**Timeframe:** Weeks 15-18 (April/May 2026)  
+**Status:** Planned
 
-| Task | Beschreibung |
-|------|--------------|
-| Session Timer | 2-5 Minuten |
-| Auto-Reset | Idle Detection |
-| Landing Sequence | Sanfter Rückführung |
-| Kiosk Mode | Autonomer Betrieb |
+| Task | Description |
+|------|-------------|
+| Session timer | 2-5 minutes |
+| Auto-reset | Idle detection |
+| Landing sequence | Smooth return |
+| Kiosk mode | Autonomous operation |
 
 ---
 
 ## Phase 3: Testing (Q3 2026)
 
-### Intern Testing ⏳
-**Zeitraum:** KW 19-24 (Mai/Juni 2026)
+### Internal Testing ⏳
+**Timeframe:** Weeks 19-24 (May/June 2026)
 
-- Lab-Team Testings
-- Iteration basierend auf Feedback
-- Performance Optimization
-- Bug Fixing
+- Lab team testing
+- Iteration based on feedback
+- Performance optimization
+- Bug fixing
 
 ### Public Beta ⏳
-**Zeitraum:** KW 25-30 (Juni/Juli 2026)
+**Timeframe:** Weeks 25-30 (June/July 2026)
 
-- Eingeschränkte Öffnung für Besucher
-- Feedback Collection
-- UX Refinement
+- Limited opening for visitors
+- Feedback collection
+- UX refinement
 
 ### Final Polish ⏳
-**Zeitraum:** KW 31-35 (August 2026)
+**Timeframe:** Weeks 31-35 (August 2026)
 
-- Letzte Anpassungen
-- Dokumentation finalisieren
-- Training für Futurium-Team
+- Final adjustments
+- Finalize documentation
+- Training for Futurium team
 
 ---
 
 ## Phase 4: Launch (September 2026)
 
-### 🎯 Eröffnung
-**Datum:** September 2026 (genauer Termin TBD)
+### 🎯 Opening
+**Date:** September 2026 (exact date TBD)
 
-- Soft Opening mit ausgewählten Gästen
-- Presse-Event
-- Public Opening
+- Soft opening with selected guests
+- Press event
+- Public opening
 
 ---
 
-## Abhängigkeiten
+## Dependencies
 
 ```mermaid
 graph LR
@@ -258,29 +258,29 @@ graph LR
 
 ---
 
-## Risiken & Mitigationen
+## Risks & Mitigations
 
-| Risiko | Wahrscheinlichkeit | Impact | Mitigation |
-|--------|-------------------|--------|------------|
-| Quest 3 WebXR Bugs | Mittel | Hoch | Fallback auf native App |
-| Latenz >20ms | Niedrig | Hoch | Dediziertes Netzwerk |
-| BNO055 Drift | Niedrig | Mittel | Regelmäßige Kalibrierung |
-| Uni-Partner Ausfall | Mittel | Mittel | Modulare Architektur |
+| Risk | Probability | Impact | Mitigation |
+|------|-------------|--------|------------|
+| Quest 3 WebXR bugs | Medium | High | Fallback to native app |
+| Latency >20ms | Low | High | Dedicated network |
+| BNO055 drift | Low | Medium | Regular calibration |
+| University partner dropout | Medium | Medium | Modular architecture |
 
 ---
 
-## Ressourcen
+## Resources
 
-### Budget (geschätzt)
+### Budget (estimated)
 
-| Kategorie | Betrag |
-|-----------|--------|
-| Hardware Prototyping | ~500€ |
-| Hardware Production | ~2.000€ |
-| Software/Lizenzen | ~0€ (Open Source) |
-| Uni-Kooperationen | Variable |
+| Category | Amount |
+|----------|--------|
+| Hardware prototyping | ~€500 |
+| Hardware production | ~€2,000 |
+| Software/licenses | ~€0 (Open Source) |
+| University collaborations | Variable |
 
-### Team-Bedarf
+### Team Requirements
 
 | Phase | FTE |
 |-------|-----|
@@ -292,11 +292,11 @@ graph LR
 
 ## Changelog
 
-| Datum | Version | Änderung |
-|-------|---------|----------|
-| 2026-01-05 | 0.2 | R2 abgeschlossen, Vanilla Three.js als Basis |
+| Date | Version | Change |
+|------|---------|--------|
+| 2026-01-05 | 0.2 | R2 completed, Vanilla Three.js as base |
 | 2026-01-05 | 0.1 | Initial Roadmap |
 
 ---
 
-*Teil des [Neural Flight](README.md) Projekts | Futurium gGmbH*
+*Part of the [Neural Flight](README.md) project | Futurium gGmbH*

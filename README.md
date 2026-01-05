@@ -1,87 +1,76 @@
-# Neural Flight 🪽
+# Neural Flight
 
-> VR flight experience on ICAROS — an open-source project by [Futurium Lab](https://futurium.de)
-
----
-
-## 🎯 What is this?
-
-We're building an **immersive VR flight installation** for the Futurium exhibition opening **September 2026**. Visitors will fly through virtual worlds using the [ICAROS](https://www.icaros.com) fitness simulator.
-
-This repo collects our **early ideas, research, and prototypes**. It's fresh — we just started. 🌱
+> VR flight experience on ICAROS — open-source project by [Futurium Lab](https://futurium.de)
 
 ---
 
-## ✅ Progress
+## What is this?
+
+An **immersive VR flight installation** for the Futurium exhibition opening **September 2026**. Visitors fly through virtual worlds using the [ICAROS](https://www.icaros.com) fitness simulator.
+
+**Key features:**
+- WebXR-based (no app store)
+- ESP32 + IMU for real-time motion tracking
+- AR onboarding with Quest 3 passthrough
+- Open architecture for community contributions
+
+---
+
+## Progress
 
 ### Done
-- [x] Initial project structure
-- [x] Sensor research (IMUs, protocols)
-- [x] WebXR framework evaluation
-- [x] System architecture draft
+- [x] Sensor research ([SENSOR_RESEARCH.md](docs/hardware/SENSOR_RESEARCH.md))
+- [x] WebXR framework evaluation ([FRAMEWORK_OPTIONS.md](docs/software/FRAMEWORK_OPTIONS.md))
+- [x] System architecture ([SYSTEM_ARCHITECTURE.md](docs/integration/SYSTEM_ARCHITECTURE.md))
+- [x] Quest 3 dev workflow ([META_QUEST_WORKFLOW.md](docs/integration/META_QUEST_WORKFLOW.md))
 
-### In Progress
-- [ ] First hardware prototype (ESP32 + IMU)
+### Next
+- [ ] Hardware prototype (ESP32 + BNO055)
 - [ ] WebXR hello world on Quest 3
-
-### Planned
-- [ ] Open pipeline for community apps
-- [ ] Godot integration
-- [ ] Psychology research documentation
-- [ ] Hardware testing & documentation
+- [ ] Sensor-to-VR bridge
 
 ---
 
-## 🚀 Next Steps
-
-| What | Why |
-|------|-----|
-| 🔌 **Open Pipeline** | Enable students & contributors to build ICAROS apps |
-| 🎮 **Godot Integration** | Connect to the open-source game engine |
-| 🧠 **Psychology Docs** | Expand research on embodiment & vestibular system |
-| 🔧 **Hardware Testing** | Test sensors, document findings |
-
----
-
-## 📁 Structure
+## Documentation
 
 ```
 docs/
-├── hardware/      # Sensors, ESP32, network
-├── software/      # WebXR, frameworks
-├── integration/   # Architecture, protocols
-├── research/      # Psychology, embodiment
-└── milestones/    # Project phases
+├── hardware/       # Sensors, components
+├── software/       # WebXR, Three.js, frameworks
+└── integration/    # Architecture, protocols, Quest workflow
 ```
 
+| Document | Description |
+|----------|-------------|
+| [HARDWARE_LIST](docs/hardware/HARDWARE_LIST.md) | Components & vendors |
+| [SENSOR_RESEARCH](docs/hardware/SENSOR_RESEARCH.md) | IMU comparison |
+| [THREEJS_WEBXR_GUIDE](docs/software/THREEJS_WEBXR_GUIDE.md) | WebXR setup |
+| [SYSTEM_ARCHITECTURE](docs/integration/SYSTEM_ARCHITECTURE.md) | Technical overview |
+| [WEBSOCKET_PROTOCOL](docs/integration/WEBSOCKET_PROTOCOL.md) | Sensor data format |
+| [ROADMAP](docs/ROADMAP.md) | Milestones & timeline |
+
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
-- **VR:** Meta Quest 3, WebXR
-- **3D:** Three.js, Godot (planned)
-- **Hardware:** ESP32, BNO055 IMU
-- **Backend:** Node.js, WebSocket
+| Layer | Technology |
+|-------|------------|
+| VR | Meta Quest 3, WebXR |
+| 3D | Three.js (Threlte, A-Frame optional) |
+| Hardware | ESP32, BNO055/BNO085 IMU |
+| Backend | Node.js, Socket.io |
 
 ---
 
-## 📖 Background
+## Background
 
-This builds on our 2019 project ["Being a Drone"](https://www.imd.tu-bs.de/index.php/projects/vr-being-a-drone--flying-architecture/) with TU Braunschweig.
+Builds on our 2019 project ["Being a Drone"](https://www.imd.tu-bs.de/index.php/projects/vr-being-a-drone--flying-architecture/) with TU Braunschweig.
 
 Part of the **"Human + Technology"** theme year 2026.
 
 ---
 
-## 🤝 Contributing
-
-We're just getting started! Structure may change.
-
-→ [Contribution Guide](docs/collaboration/CONTRIBUTION_GUIDE.md)
-
----
-
-## 📬 Contact
+## Contact
 
 **David Weigend** — Lab Lead, Futurium Berlin
 weigend@futurium.de
